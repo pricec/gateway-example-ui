@@ -18,4 +18,13 @@ connection.onopen = function()
 connection.onmessage = function(message)
 {
     console.log("Received message: " + message.data);
+    var responseBytes = [];
+    for (var i = 0; i < message.data.length; i++)
+    {
+        var code = message.data.charCodeAt(i);
+        responseBytes.push(code);
+    }
+    console.log("Response bytes: " + responseBytes);
+    var response = messages.Response.deserializeBinary(responseBytes);
+    console.log("Response: " + JSON.stringify(response.toObject()));
 }
