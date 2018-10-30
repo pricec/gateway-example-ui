@@ -1,0 +1,9 @@
+{
+    "name": "gateway-example-wui",
+    "version": "1.0.0",
+    "main": "index.html",
+    "dependencies": {
+        "google-protobuf": "^3.6.1",
+        "protobuf": "ssh://git@github.com/pricec/protobuf"
+    }
+}
